@@ -9,13 +9,6 @@ You, the caregiver named Rumia, are to care for Reimu from 1997 to 2002, support
 > [!IMPORTANT]
 > Project Satsuki is a fan game of the Touhou Project, made by Team Shenghai Alice--ZUN--and a loose adaptation of a fan webcomic called Osana Reimu by Joyful. As such, this project is a derivative of such and does not reflect any of the author's thoughts.
 
-# Socials
-<a href="https://www.youtube.com/redirect?event=channel_header&redir_token=QUFFLUhqbkFZRTNTVXVvLW1WNW53SV9xajl2M2RWanFGd3xBQ3Jtc0tuNWxpcEVMeThBWmdnaU9hRnhaMHVkYnA1VUNLWUtzUXBLRTltNGl0Y3dSYUZhaUZCQ3VCd09jYVVCNTRBS0hkSGNIUkx3VmdWdno4cGh4NXpuSjBWZ1RtNTBXZk00Z25aOUNadTFRbkhwRU9Va0FBMA&q=https%3A%2F%2Fdiscord.gg%2FwjEBg9EXwD">
-    <img src="https://github.com/abanoy/project-satsuki/blob/main/img/github/discord.png?raw=true" alt="Discord Link" width="200">
-</a>
-
-Join our Discord to follow up with more updates on Project Satsuki!
-
 # Controls
 ### General
 `ESC` - To escape back to the main menu.
