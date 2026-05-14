@@ -1,0 +1,439 @@
+[gd_scene format=3 uid="uid://b22hxsd0njtdc"]
+
+[ext_resource type="Script" uid="uid://bfswbqfrd1mwt" path="res://scr/battle/battle.gd" id="1_5ujff"]
+[ext_resource type="Script" uid="uid://6v15qbuybpys" path="res://scr/battle/menu.gd" id="1_qirju"]
+[ext_resource type="Texture2D" uid="uid://b240q7uxi1vuf" path="res://img/battle/ui/bar_health_outline.png" id="2_8bejw"]
+[ext_resource type="Texture2D" uid="uid://dbbvm38w6vbp2" path="res://img/battle/ui/bar_health.png" id="3_5ioke"]
+[ext_resource type="PackedScene" uid="uid://qh6nrxia7e7p" path="res://sce/battle/window_default.tscn" id="3_kkq1o"]
+[ext_resource type="Script" uid="uid://ce27c84tcorx7" path="res://scr/battle/window_default.gd" id="4_38qwi"]
+[ext_resource type="PackedScene" uid="uid://dm57bw1buy0n3" path="res://sce/battle/battle_player.tscn" id="4_as2me"]
+[ext_resource type="Texture2D" uid="uid://2c6t1uy6vmec" path="res://img/battle/ui/bar_mana_outline.png" id="4_h8x6l"]
+[ext_resource type="Texture2D" uid="uid://c446b2ea67ci" path="res://img/battle/ui/bar_mana.png" id="5_0s6ky"]
+[ext_resource type="Script" uid="uid://cni85ca0rhewg" path="res://scr/battle/battle_player.gd" id="5_dqwdw"]
+[ext_resource type="PackedScene" uid="uid://cd8hwu5m1l2y4" path="res://sce/battle/atb_bar.tscn" id="5_u7wyi"]
+[ext_resource type="Texture2D" uid="uid://bqlvfdlqcype8" path="res://img/battle/ui/char/reimu/reimu.png" id="6_83w1n"]
+[ext_resource type="Texture2D" uid="uid://j1mspbuckm4q" path="res://img/battle/ui/gauge.png" id="8_5ioke"]
+[ext_resource type="Texture2D" uid="uid://bg8r1xcy51j3p" path="res://img/battle/ui/outline.png" id="9_si5xj"]
+[ext_resource type="Texture2D" uid="uid://d0gmaamdn0avs" path="res://img/battle/char/reimu/reimu.png" id="11_1vryr"]
+[ext_resource type="PackedScene" uid="uid://cyuqxw0uejvos" path="res://sce/battle/battle_enemy.tscn" id="12_n3432"]
+[ext_resource type="Texture2D" uid="uid://bfpj2mc506n44" path="res://img/battle/ui/buttons/attack.png" id="15_0s6ky"]
+[ext_resource type="Texture2D" uid="uid://d3qinif6mhtnx" path="res://img/battle/ui/buttons/attack_pressed.png" id="16_pju53"]
+[ext_resource type="Texture2D" uid="uid://dxnoq3me4phk6" path="res://img/battle/ui/buttons/attack_highlight.png" id="17_dbj3f"]
+[ext_resource type="PackedScene" uid="uid://bfi7qbi2fkjik" path="res://sce/battle/pause_menu.tscn" id="18_8u88m"]
+[ext_resource type="Texture2D" uid="uid://dmryl1swgwmf8" path="res://img/battle/ui/buttons/defend.png" id="18_u478v"]
+[ext_resource type="Texture2D" uid="uid://bbu2t5dlred5" path="res://img/battle/ui/buttons/defend_pressed.png" id="19_k6e4n"]
+[ext_resource type="Texture2D" uid="uid://dd3gbf04500co" path="res://img/battle/ui/buttons/defend_highlight.png" id="20_83w1n"]
+[ext_resource type="Texture2D" uid="uid://3ph7hpkbwnj5" path="res://img/battle/ui/buttons/item.png" id="21_si5xj"]
+[ext_resource type="Texture2D" uid="uid://d3t0il5xfb3dc" path="res://img/battle/ui/buttons/item_pressed.png" id="22_jr130"]
+[ext_resource type="Texture2D" uid="uid://lu1700w1lk3o" path="res://img/battle/ui/buttons/item_highlight.png" id="23_mby0h"]
+[ext_resource type="Texture2D" uid="uid://c7p844e4jd0kk" path="res://img/battle/ui/buttons/spell.png" id="24_bsv3x"]
+[ext_resource type="Texture2D" uid="uid://c2bqaqytulv47" path="res://img/battle/ui/buttons/spell_pressed.png" id="25_mv0ff"]
+[ext_resource type="Texture2D" uid="uid://qmq0ikbnndms" path="res://img/battle/ui/buttons/spell_highlight.png" id="26_ugts4"]
+[ext_resource type="Texture2D" uid="uid://bqwsa1hx1esld" path="res://img/battle/ui/buttons/escape.png" id="27_xpufo"]
+[ext_resource type="Texture2D" uid="uid://cqpnwrwxtbkc" path="res://img/battle/ui/buttons/escape_pressed.png" id="28_7ifbe"]
+[ext_resource type="Texture2D" uid="uid://cjtstfy84jwi6" path="res://img/battle/ui/buttons/escape_highlight.png" id="29_fvyc3"]
+[ext_resource type="Texture2D" uid="uid://j6t2ur4mhoxr" path="res://img/battle/ui/menu_spell.png" id="30_3u6ci"]
+[ext_resource type="Texture2D" uid="uid://ccdmn6ibiaav2" path="res://img/battle/ui/pointer.png" id="31_2x9ue"]
+[ext_resource type="Texture2D" uid="uid://cqts0itlko25q" path="res://img/battle/background.png" id="32_k6e4n"]
+[ext_resource type="Texture2D" uid="uid://b22ni0anvf6ea" path="res://img/battle/ui/crosshead.png" id="33_jr130"]
+[ext_resource type="Script" uid="uid://c010yvc4trjr4" path="res://scr/battle/spell_menu_ui.gd" id="34_47u1e"]
+[ext_resource type="PackedScene" uid="uid://cr1k8lngknafm" path="res://sce/battle/loss_menu.tscn" id="36_bd33m"]
+[ext_resource type="Script" uid="uid://b8d37bv7ojd3h" path="res://scr/battle/menu_cursor.gd" id="37_7ifbe"]
+[ext_resource type="PackedScene" uid="uid://cdabkm0bjkqks" path="res://sce/battle/victory_menu.tscn" id="37_bya8t"]
+
+[sub_resource type="Animation" id="Animation_4reey"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ddjxc"]
+resource_name = "highlight"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.67451)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xpufo"]
+_data = {
+&"RESET": SubResource("Animation_4reey"),
+&"highlight": SubResource("Animation_ddjxc")
+}
+
+[node name="Battle" type="Control" unique_id=392824848 groups=["battle"]]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ujff")
+
+[node name="PlayerBars" type="Control" parent="." unique_id=2013161490]
+anchors_preset = 0
+offset_left = 117.0
+offset_top = 46.0
+offset_right = 352.953
+offset_bottom = 73.0
+
+[node name="PlayerHP" type="AspectRatioContainer" parent="PlayerBars" unique_id=155670438]
+layout_mode = 0
+offset_right = 236.0
+offset_bottom = 27.0
+ratio = 8.739
+alignment_horizontal = 0
+alignment_vertical = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PlayerBars/PlayerHP" unique_id=988558588]
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+texture_over = ExtResource("2_8bejw")
+texture_progress = ExtResource("3_5ioke")
+
+[node name="HPPercent" type="Label" parent="PlayerBars/PlayerHP" unique_id=1123325476]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="PlayerSP" type="AspectRatioContainer" parent="PlayerBars" unique_id=1279421784]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 155.0
+offset_bottom = 55.0
+ratio = 5.5385
+alignment_horizontal = 0
+alignment_vertical = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PlayerBars/PlayerSP" unique_id=488574651]
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+texture_over = ExtResource("4_h8x6l")
+texture_progress = ExtResource("5_0s6ky")
+
+[node name="CharPicture" type="TextureButton" parent="PlayerBars" unique_id=1548169081]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_left = -77.0
+offset_top = -20.0
+offset_right = 19.0
+offset_bottom = 76.0
+texture_normal = ExtResource("6_83w1n")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CanvasModulate" type="Label" parent="PlayerBars" unique_id=1385943022]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -39.0
+offset_right = 230.0
+offset_bottom = 5.0
+theme_override_font_sizes/font_size = 31
+text = "Reimu Hakurei"
+
+[node name="PlayerATB" type="AspectRatioContainer" parent="." unique_id=1782283907]
+process_mode = 1
+layout_mode = 0
+offset_left = 389.0
+offset_top = 308.0
+offset_right = 2389.0
+offset_bottom = 658.0
+scale = Vector2(0.145, 0.145)
+ratio = 8.739
+alignment_horizontal = 0
+alignment_vertical = 0
+script = ExtResource("5_dqwdw")
+
+[node name="ATBBar" parent="PlayerATB" unique_id=524664492 instance=ExtResource("5_u7wyi")]
+custom_minimum_size = Vector2(2000, 350)
+layout_mode = 2
+texture_under = null
+texture_over = ExtResource("9_si5xj")
+texture_progress = ExtResource("8_5ioke")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerATB" unique_id=1854023445]
+libraries/ = SubResource("AnimationLibrary_xpufo")
+
+[node name="SP" type="VBoxContainer" parent="." unique_id=1041260826]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = 40.0
+offset_right = 265.0
+offset_bottom = 68.0
+
+[node name="Options2" parent="SP" unique_id=690340739 instance=ExtResource("3_kkq1o")]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_38qwi")
+
+[node name="Player" type="Control" parent="." unique_id=670713127]
+process_mode = 1
+anchors_preset = 0
+offset_left = 202.0
+offset_top = -5.0
+offset_right = 242.0
+offset_bottom = 35.0
+script = ExtResource("1_qirju")
+
+[node name="BattlePlayer" parent="Player" unique_id=727921503 instance=ExtResource("4_as2me")]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 403.0
+offset_right = 2181.0
+offset_bottom = 2403.0
+scale = Vector2(0.155, 0.155)
+texture_normal = ExtResource("11_1vryr")
+
+[node name="AI" type="Control" parent="." unique_id=1450592602]
+process_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qirju")
+
+[node name="BattlePlayer2" parent="AI" unique_id=505457060 instance=ExtResource("12_n3432")]
+layout_mode = 0
+offset_left = 1420.0
+offset_top = 675.0
+offset_right = 3420.0
+offset_bottom = 2675.0
+scale = Vector2(0.155, 0.155)
+
+[node name="BattlePlayer" parent="AI" unique_id=283399842 instance=ExtResource("12_n3432")]
+layout_mode = 0
+offset_left = 1124.0
+offset_top = 378.0
+offset_right = 3124.0
+offset_bottom = 2378.0
+scale = Vector2(0.155, 0.155)
+
+[node name="QueueControl" type="Control" parent="." unique_id=1358928522]
+anchors_preset = 0
+offset_left = 1568.0
+offset_top = 84.0
+offset_right = 1568.0
+offset_bottom = 166.0
+
+[node name="Queue" type="HBoxContainer" parent="QueueControl" unique_id=1355564895]
+texture_filter = 1
+layout_mode = 0
+offset_left = -252.0
+offset_right = 4.0
+offset_bottom = 82.0
+
+[node name="QueueItem1" type="TextureRect" parent="QueueControl/Queue" unique_id=488622761]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QueueItem2" type="TextureRect" parent="QueueControl/Queue" unique_id=1753437484]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QueueItem3" type="TextureRect" parent="QueueControl/Queue" unique_id=1921260930]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="QueueControl" unique_id=698565698]
+layout_mode = 0
+offset_left = -256.0
+offset_top = -52.0
+offset_right = -157.0
+offset_bottom = -8.0
+theme_override_font_sizes/font_size = 31
+text = "Queue"
+
+[node name="QueueCount" type="Label" parent="QueueControl" unique_id=211349827]
+layout_mode = 0
+offset_left = -1242.0
+offset_top = 47.0
+offset_right = -1115.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 23
+text = "Queued 0/3"
+
+[node name="Options" parent="." unique_id=1986818260 instance=ExtResource("3_kkq1o")]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 151.0
+offset_right = 663.0
+offset_bottom = 221.0
+texture = null
+script = ExtResource("4_38qwi")
+
+[node name="Options" type="HBoxContainer" parent="Options" unique_id=506928137]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 339.0
+offset_bottom = 67.0
+script = ExtResource("1_qirju")
+
+[node name="ATK" type="TextureButton" parent="Options/Options" unique_id=809534676]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("15_0s6ky")
+texture_pressed = ExtResource("16_pju53")
+texture_hover = ExtResource("17_dbj3f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="DEF" type="TextureButton" parent="Options/Options" unique_id=1080527765]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("18_u478v")
+texture_pressed = ExtResource("19_k6e4n")
+texture_hover = ExtResource("20_83w1n")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ITM" type="TextureButton" parent="Options/Options" unique_id=400183947]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("21_si5xj")
+texture_pressed = ExtResource("22_jr130")
+texture_hover = ExtResource("23_mby0h")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SPL" type="TextureButton" parent="Options/Options" unique_id=269748151]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("24_bsv3x")
+texture_pressed = ExtResource("25_mv0ff")
+texture_hover = ExtResource("26_ugts4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ESC" type="TextureButton" parent="Options/Options" unique_id=953804985]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("27_xpufo")
+texture_pressed = ExtResource("28_7ifbe")
+texture_hover = ExtResource("29_fvyc3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SpellMenu" type="Control" parent="." unique_id=1981694432]
+visible = false
+anchors_preset = 0
+offset_left = 639.0
+offset_top = 143.0
+offset_right = 1219.0
+offset_bottom = 903.0
+script = ExtResource("34_47u1e")
+
+[node name="Background" type="TextureRect" parent="SpellMenu" unique_id=191519762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_3u6ci")
+expand_mode = 1
+
+[node name="Pointer" type="TextureRect" parent="SpellMenu" unique_id=552190237]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 182.0
+offset_right = 122.0
+offset_bottom = 246.0
+texture = ExtResource("31_2x9ue")
+expand_mode = 1
+
+[node name="SpellOptions" type="VBoxContainer" parent="SpellMenu" unique_id=1728560459]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 168.0
+offset_right = 551.0
+offset_bottom = 368.0
+theme_override_constants/separation = 16
+script = ExtResource("1_qirju")
+
+[node name="FIRE" type="Button" parent="SpellMenu/SpellOptions" unique_id=1862874744]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = "Fire   -7 SP"
+
+[node name="ICE" type="Button" parent="SpellMenu/SpellOptions" unique_id=2016569515]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = "Ice    -3 SP"
+
+[node name="MenuCursor" type="Sprite2D" parent="." unique_id=1707543800]
+z_index = 1
+position = Vector2(1281.0001, 566)
+scale = Vector2(0.145, 0.145)
+texture = ExtResource("33_jr130")
+script = ExtResource("37_7ifbe")
+
+[node name="PauseMenu" parent="." unique_id=431894232 instance=ExtResource("18_8u88m")]
+visible = false
+layout_mode = 0
+offset_left = 602.0
+offset_top = 199.0
+offset_right = 1292.0
+offset_bottom = 818.0
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1889357071]
+z_index = -5
+position = Vector2(958.705, 553.5)
+scale = Vector2(0.502774, 0.514352)
+texture = ExtResource("32_k6e4n")
+
+[node name="LossMenu" parent="." unique_id=1680463907 instance=ExtResource("36_bd33m")]
+visible = false
+layout_mode = 0
+offset_left = 679.0
+offset_top = 417.0
+offset_right = 1191.0
+offset_bottom = 673.0
+
+[node name="VictoryMenu" parent="." unique_id=2073639032 instance=ExtResource("37_bya8t")]
+visible = false
+layout_mode = 0
+offset_left = 679.0
+offset_top = 282.0
+offset_right = 1191.0
+offset_bottom = 794.0
+
+[node name="tmrDeadHoldup" type="Timer" parent="." unique_id=704890934]
+wait_time = 5.0
+one_shot = true
+
+[node name="tmrBackToExploration" type="Timer" parent="." unique_id=2141388717]
+
+[connection signal="filled" from="PlayerATB/ATBBar" to="PlayerATB" method="_on_atb_bar_filled"]
+[connection signal="button_pressed" from="Player" to="." method="_on_player_button_pressed"]
+[connection signal="button_pressed" from="AI" to="." method="_on_ai_button_pressed"]
+[connection signal="button_focused" from="Options/Options" to="." method="_on_options_button_focused"]
+[connection signal="button_pressed" from="Options/Options" to="." method="_on_options_button_pressed"]
+[connection signal="timeout" from="tmrDeadHoldup" to="." method="_on_tmr_dead_holdup_timeout"]
+[connection signal="timeout" from="tmrBackToExploration" to="." method="_on_tmr_back_to_exploration_timeout"]

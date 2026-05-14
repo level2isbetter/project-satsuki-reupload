@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bsg4wq27itm1e"]
+
+[ext_resource type="Script" uid="uid://cd8ade5xmwf4s" path="res://sce/conversation/DialogueBox.gd" id="1_k4804"]
+[ext_resource type="PackedScene" uid="uid://4k47me3rel56" path="res://sce/conversation/ChoiceButton.tscn" id="2_drog7"]
+[ext_resource type="Texture2D" uid="uid://b0lvkvx2lqgs3" path="res://img/conversation/ui/textbox.png" id="2_e7yd1"]
+[ext_resource type="PackedScene" uid="uid://b32vpwqvkt0vu" path="res://sce/conversation/options_menu.tscn" id="3_xetfl"]
+[ext_resource type="Texture2D" uid="uid://1uhmrc6xovo7" path="res://img/conversation/Sword_Pixel_art_-_Radin.png" id="8_8e1gq"]
+[ext_resource type="Texture2D" uid="uid://b6s0t73txd01w" path="res://img/conversation/background/shrine.png" id="8_j0611"]
+[ext_resource type="Script" uid="uid://bh1god6xuofb2" path="res://sce/conversation/character_manager.gd" id="13_xmeks"]
+[ext_resource type="PackedScene" uid="uid://jfprbbd22ylb" path="res://sce/conversation/CharacterPortrait.tscn" id="14_5ok8b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_imwg8"]
+texture = ExtResource("2_e7yd1")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[node name="Control" type="Control" unique_id=1636466273]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_k4804")
+
+[node name="tmrTransition" type="Timer" parent="." unique_id=453740571]
+
+[node name="Panel" type="Panel" parent="." unique_id=1936404229]
+z_index = -20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1882.0
+offset_bottom = 1043.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_imwg8")
+
+[node name="PauseButton" type="Button" parent="Panel" unique_id=739260414]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 739.0
+offset_right = 184.0
+offset_bottom = 787.0
+size_flags_horizontal = 3
+text = "PAUSE"
+
+[node name="SaveButton" type="Button" parent="Panel" unique_id=1444869322]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 818.0
+offset_right = 187.0
+offset_bottom = 867.0
+size_flags_horizontal = 3
+text = "SAVE"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=442867376]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 668.0
+offset_right = 1729.0
+offset_bottom = 1050.0
+
+[node name="OptionsBar" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1821305279]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=1087588151]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+scroll_active = false
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="Panel/VBoxContainer" unique_id=546911741]
+visible = false
+z_index = 30
+layout_mode = 2
+theme_override_constants/separation = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" parent="Panel/VBoxContainer/ChoicesContainer" unique_id=141810837 instance=ExtResource("2_drog7")]
+layout_mode = 2
+
+[node name="NamePlate" type="Panel" parent="Panel" unique_id=2031787794]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="Panel/NamePlate" unique_id=1432210143]
+z_index = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = 613.0
+offset_right = 1729.0
+offset_bottom = 681.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.2399087, 0.2395224, 0.26579124, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.88235295)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+
+[node name="OptionsMenu" parent="." unique_id=373379227 instance=ExtResource("3_xetfl")]
+layout_mode = 0
+
+[node name="BGFade" type="ColorRect" parent="." unique_id=1256600808]
+visible = false
+z_index = 100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1903.0
+offset_bottom = 1067.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=84406588]
+
+[node name="Sword" type="Sprite2D" parent="Node2D" unique_id=1135394214]
+position = Vector2(546, 276)
+scale = Vector2(0.16904762, 0.17306016)
+texture = ExtResource("8_8e1gq")
+
+[node name="Background" type="Sprite2D" parent="Node2D" unique_id=335690803]
+z_index = -90
+position = Vector2(3, -1)
+scale = Vector2(4.253333, 4.1)
+texture = ExtResource("8_j0611")
+centered = false
+
+[node name="CharacterManager" type="Node2D" parent="Node2D" unique_id=1596026219]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("13_xmeks")
+character_portrait_scene = ExtResource("14_5ok8b")
+
+[connection signal="timeout" from="tmrTransition" to="." method="_on_tmr_transition_timeout"]

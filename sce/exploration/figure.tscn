@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://p10tfb8yldb5"]
+
+[ext_resource type="Script" uid="uid://cj4v1fep23dxd" path="res://scr/exploration/collectible_item.gd" id="1_aqdd3"]
+[ext_resource type="Texture2D" uid="uid://bseioe30jwet5" path="res://img/items/figure.png" id="2_jwwpa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fig01"]
+radius = 24.0
+
+[node name="CollectibleFigure" type="Area2D" unique_id=1911659570]
+z_index = 1
+script = ExtResource("1_aqdd3")
+itemId = "figure"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=542677783]
+shape = SubResource("CircleShape2D_fig01")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1814302722]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_jwwpa")

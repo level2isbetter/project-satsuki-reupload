@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bx8vd2hl734ih"]
+
+[ext_resource type="Texture2D" uid="uid://brded2ykl865x" path="res://img/battle/ui/placeholder/down arrow(placeholder).png" id="1_0wxb1"]
+[ext_resource type="Script" uid="uid://b8d37bv7ojd3h" path="res://scr/battle/menu_cursor.gd" id="2_7hrkv"]
+
+[node name="MenuCursor" type="TextureRect"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1122.0
+offset_bottom = -618.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0wxb1")
+stretch_mode = 4
+script = ExtResource("2_7hrkv")

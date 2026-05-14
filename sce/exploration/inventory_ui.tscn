@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3 uid="uid://tld5tby63cfe"]
+
+[ext_resource type="Script" uid="uid://dhihbfijlrb63" path="res://scr/ui/inventory_ui.gd" id="1_yenuy"]
+[ext_resource type="Texture2D" uid="uid://cff7d2nq7onx6" path="res://img/ui/button_backpack.png" id="2_xaqy0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wicv"]
+bg_color = Color(0.96767145, 0.96767133, 0.96767145, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0005046764, 0.0010093529, 0.0010093529, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 91.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yenuy")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -200.0
+offset_right = 460.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7wicv")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -6.0
+offset_right = 2.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BackpackIcon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_xaqy0")
+expand_mode = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Inventory
+"
+
+[node name="InventoryGrid" type="GridContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 10
+
+[node name="ItemInfo" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="Panel/MarginContainer/VBoxContainer/ItemInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "\"\""
+
+[node name="ItemDesc" type="Label" parent="Panel/MarginContainer/VBoxContainer/ItemInfo"]
+layout_mode = 2
+text = "\"\""
+autowrap_mode = 2

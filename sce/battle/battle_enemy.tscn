@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cyuqxw0uejvos"]
+
+[ext_resource type="Script" uid="uid://krb8nyjmceo3" path="res://scr/battle/battle_enemy.gd" id="1_abc123"]
+[ext_resource type="Texture2D" uid="uid://bt63n48a8hi1d" path="res://img/battle/char/shadows/rook.png" id="1_mfeyd"]
+[ext_resource type="PackedScene" uid="uid://cd8hwu5m1l2y4" path="res://sce/battle/atb_bar.tscn" id="2_atb"]
+[ext_resource type="Texture2D" uid="uid://bg8r1xcy51j3p" path="res://img/battle/ui/outline.png" id="4_jnscx"]
+[ext_resource type="Texture2D" uid="uid://c4gf4w1vc6dao" path="res://img/battle/ui/enemy.png" id="5_ni0il"]
+[ext_resource type="Texture2D" uid="uid://j1mspbuckm4q" path="res://img/battle/ui/gauge.png" id="5_t7n6w"]
+
+[node name="BattleEnemy" type="TextureButton" unique_id=460434070]
+texture_filter = 1
+offset_right = 2000.0
+offset_bottom = 2000.0
+texture_normal = ExtResource("1_mfeyd")
+script = ExtResource("1_abc123")
+enemy_type = "flame"
+
+[node name="EnemyHP" parent="." unique_id=1351926702 instance=ExtResource("2_atb")]
+layout_mode = 0
+offset_left = 245.0
+offset_top = -376.0
+offset_right = 1800.0
+offset_bottom = -73.031
+value = 100.0
+texture_under = null
+texture_over = ExtResource("4_jnscx")
+texture_progress = ExtResource("5_ni0il")
+script = null
+
+[node name="ATBBar" parent="." unique_id=612890978 instance=ExtResource("2_atb")]
+visible = false
+custom_minimum_size = Vector2(2000, 350)
+layout_mode = 0
+offset_right = 2000.0
+offset_bottom = 350.0
+texture_under = null
+texture_progress = ExtResource("5_t7n6w")

@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://buv8px6rgg0td"]
+
+[ext_resource type="Script" uid="uid://cs8aiv2p7yxnl" path="res://sce/main.gd" id="1_44ee3"]
+[ext_resource type="Texture2D" uid="uid://c2d8pcoyb3rpv" path="res://img/menu/background.png" id="6_oc803"]
+[ext_resource type="Texture2D" uid="uid://c6q7yeq2lgo87" path="res://img/menu/title.png" id="7_8syg3"]
+[ext_resource type="Texture2D" uid="uid://c65xln74lxlui" path="res://img/github/discord.png" id="7_bu2w3"]
+[ext_resource type="Texture2D" uid="uid://r4hq6hb30dpr" path="res://img/menu/text.png" id="8_51xnf"]
+[ext_resource type="FontFile" uid="uid://bi805ult1fseu" path="res://fnt/consolab.ttf" id="9_gbmp4"]
+[ext_resource type="FontFile" uid="uid://d3vavxj3jgusv" path="res://fnt/consolaz.ttf" id="10_h1fpd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4rtdj"]
+font = ExtResource("10_h1fpd")
+font_size = 100
+
+[node name="Node2D" type="Node2D" unique_id=1605181423]
+script = ExtResource("1_44ee3")
+
+[node name="imgBackground" type="TextureRect" parent="." unique_id=1011669442]
+offset_right = 1920.887
+offset_bottom = 1083.0
+texture = ExtResource("6_oc803")
+expand_mode = 1
+
+[node name="cntTitle" type="Control" parent="." unique_id=1123622298]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="cntTitle" unique_id=1563888503]
+layout_mode = 0
+offset_left = 1469.0
+offset_top = 951.0
+offset_right = 1868.7867
+offset_bottom = 1026.0
+texture = ExtResource("7_bu2w3")
+expand_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="cntTitle/TextureRect" unique_id=388284431]
+layout_mode = 0
+offset_right = 407.0
+offset_bottom = 79.0
+uri = "https://www.youtube.com/redirect?event=channel_header&redir_token=QUFFLUhqbkFZRTNTVXVvLW1WNW53SV9xajl2M2RWanFGd3xBQ3Jtc0tuNWxpcEVMeThBWmdnaU9hRnhaMHVkYnA1VUNLWUtzUXBLRTltNGl0Y3dSYUZhaUZCQ3VCd09jYVVCNTRBS0hkSGNIUkx3VmdWdno4cGh4NXpuSjBWZ1RtNTBXZk00Z25aOUNadTFRbkhwRU9Va0FBMA&q=https%3A%2F%2Fdiscord.gg%2FwjEBg9EXwD"
+
+[node name="imgTitle" type="TextureRect" parent="cntTitle" unique_id=62597525]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 19.0
+offset_right = 1581.353
+offset_bottom = 810.0
+texture = ExtResource("7_8syg3")
+expand_mode = 1
+
+[node name="imgEnter" type="TextureRect" parent="cntTitle" unique_id=25597779]
+visible = false
+layout_mode = 0
+offset_left = 734.0
+offset_top = 859.0
+offset_right = 1137.7813
+offset_bottom = 918.0
+texture = ExtResource("8_51xnf")
+expand_mode = 1
+
+[node name="cntSelection" type="Control" parent="." unique_id=1954431377]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="btnExploration" type="Button" parent="cntSelection" unique_id=1661442369]
+layout_mode = 0
+offset_left = 1031.0
+offset_top = 579.0
+offset_right = 1296.0
+offset_bottom = 671.0
+theme_override_fonts/font = ExtResource("9_gbmp4")
+theme_override_font_sizes/font_size = 38
+text = "Exploration"
+
+[node name="btnConversation" type="Button" parent="cntSelection" unique_id=1439397048]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 583.0
+offset_right = 868.0
+offset_bottom = 675.0
+theme_override_fonts/font = ExtResource("9_gbmp4")
+theme_override_font_sizes/font_size = 38
+text = "Conversation"
+
+[node name="btnBattle" type="Button" parent="cntSelection" unique_id=1835391995]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 757.0
+offset_right = 863.0
+offset_bottom = 849.0
+theme_override_fonts/font = ExtResource("9_gbmp4")
+theme_override_font_sizes/font_size = 38
+text = "Battle"
+
+[node name="btnSchedule" type="Button" parent="cntSelection" unique_id=400369650]
+layout_mode = 0
+offset_left = 1036.0
+offset_top = 761.0
+offset_right = 1301.0
+offset_bottom = 853.0
+theme_override_fonts/font = ExtResource("9_gbmp4")
+theme_override_font_sizes/font_size = 38
+text = "Schedule"
+
+[node name="lblText" type="Label" parent="cntSelection" unique_id=372815409]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 459.0
+offset_top = 171.0
+offset_right = 1394.0
+offset_bottom = 272.0
+grow_horizontal = 2
+text = "Select a Mechanic"
+label_settings = SubResource("LabelSettings_4rtdj")
+
+[node name="tmrStart" type="Timer" parent="." unique_id=1096862453]
+one_shot = true
+autostart = true
+
+[node name="tmrFlick" type="Timer" parent="." unique_id=1933768478]
+wait_time = 0.4
+
+[node name="tmrTransition" type="Timer" parent="." unique_id=679694377]
+wait_time = 0.3
+one_shot = true
+
+[node name="tmrMode" type="Timer" parent="." unique_id=134925326]
+wait_time = 0.3
+
+[connection signal="mouse_entered" from="cntSelection/btnExploration" to="." method="_on_btn_exploration_mouse_entered"]
+[connection signal="pressed" from="cntSelection/btnExploration" to="." method="_on_btn_exploration_pressed"]
+[connection signal="mouse_entered" from="cntSelection/btnConversation" to="." method="_on_btn_conversation_mouse_entered"]
+[connection signal="pressed" from="cntSelection/btnConversation" to="." method="_on_btn_conversation_pressed"]
+[connection signal="mouse_entered" from="cntSelection/btnBattle" to="." method="_on_btn_battle_mouse_entered"]
+[connection signal="pressed" from="cntSelection/btnBattle" to="." method="_on_btn_battle_pressed"]
+[connection signal="mouse_entered" from="cntSelection/btnSchedule" to="." method="_on_btn_schedule_mouse_entered"]
+[connection signal="pressed" from="cntSelection/btnSchedule" to="." method="_on_btn_schedule_pressed"]
+[connection signal="timeout" from="tmrStart" to="." method="_on_tmr_start_timeout"]
+[connection signal="timeout" from="tmrFlick" to="." method="_on_tmr_flick_timeout"]
+[connection signal="timeout" from="tmrTransition" to="." method="_on_tmr_transition_timeout"]
+[connection signal="timeout" from="tmrMode" to="." method="_on_tmr_mode_timeout"]

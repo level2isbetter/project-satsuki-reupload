@@ -1,0 +1,390 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsy7eej11bcl0"]
+
+[ext_resource type="Script" uid="uid://c28esei3rvjnr" path="res://scr/schedule/schedule.gd" id="1_3a2vp"]
+[ext_resource type="Texture2D" uid="uid://b1pvhk5d58drs" path="res://img/characterTEMP.png" id="2_nkn11"]
+[ext_resource type="Texture2D" uid="uid://bwb3n6m401swq" path="res://img/blank_half.png" id="3_hg06g"]
+[ext_resource type="Texture2D" uid="uid://daud3u2cupbsu" path="res://img/icon.png" id="4_x6xmd"]
+[ext_resource type="Script" uid="uid://brm05nc1lcpbt" path="res://sce/schedule/nde_progress.gd" id="5_hg06g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7gcej"]
+font_size = 62
+
+[sub_resource type="LabelSettings" id="LabelSettings_x6xmd"]
+font_size = 49
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3a2vp")
+
+[node name="grdSelection" type="GridContainer" parent="."]
+offset_left = 22.0
+offset_top = 657.0
+offset_right = 422.0
+offset_bottom = 1057.0
+pivot_offset = Vector2(200, 200)
+theme_override_constants/h_separation = 270
+theme_override_constants/v_separation = 270
+columns = 2
+
+[node name="tbnItem0" type="TextureButton" parent="grdSelection"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_hg06g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="tbnItem1" type="TextureButton" parent="grdSelection"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_hg06g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="tbnItem2" type="TextureButton" parent="grdSelection"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_hg06g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="tbnItem3" type="TextureButton" parent="grdSelection"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_hg06g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="hbox_actions" type="HBoxContainer" parent="."]
+offset_left = 1561.0
+offset_top = 71.0
+offset_right = 1892.0
+offset_bottom = 146.0
+alignment = 1
+
+[node name="btnAction" type="Button" parent="hbox_actions"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Action"
+
+[node name="btnEnd" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 1689.0
+offset_top = 926.0
+offset_right = 1789.0
+offset_bottom = 957.0
+text = "End"
+
+[node name="vbox_info_container" type="VBoxContainer" parent="."]
+offset_left = 328.0
+offset_top = 626.0
+offset_right = 737.0
+offset_bottom = 864.0
+alignment = 1
+
+[node name="hbox_info_container" type="HBoxContainer" parent="vbox_info_container"]
+layout_mode = 2
+
+[node name="vbox_img" type="VBoxContainer" parent="vbox_info_container/hbox_info_container"]
+layout_mode = 2
+
+[node name="img_info" type="TextureRect" parent="vbox_info_container/hbox_info_container/vbox_img"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_x6xmd")
+expand_mode = 1
+
+[node name="vbox_info" type="VBoxContainer" parent="vbox_info_container/hbox_info_container"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="lblInfo" type="Label" parent="vbox_info_container/hbox_info_container/vbox_info"]
+layout_mode = 2
+text = "Info Test"
+horizontal_alignment = 1
+
+[node name="lblInfoText" type="Label" parent="vbox_info_container/hbox_info_container/vbox_info"]
+layout_mode = 2
+text = "Sample Sample Sample Text"
+
+[node name="vboxParameter1" type="VBoxContainer" parent="vbox_info_container/hbox_info_container/vbox_info"]
+layout_mode = 2
+
+[node name="lblParameter1" type="Label" parent="vbox_info_container/hbox_info_container/vbox_info/vboxParameter1"]
+layout_mode = 2
+text = "Paramter 1"
+
+[node name="prgParameter1" type="ProgressBar" parent="vbox_info_container/hbox_info_container/vbox_info/vboxParameter1"]
+layout_mode = 2
+value = 80.0
+
+[node name="vboxParameter2" type="VBoxContainer" parent="vbox_info_container/hbox_info_container/vbox_info"]
+layout_mode = 2
+
+[node name="lblParameter2" type="Label" parent="vbox_info_container/hbox_info_container/vbox_info/vboxParameter2"]
+layout_mode = 2
+text = "Paramter 2"
+
+[node name="prgParameter2" type="ProgressBar" parent="vbox_info_container/hbox_info_container/vbox_info/vboxParameter2"]
+layout_mode = 2
+value = 80.0
+
+[node name="vboxParameter3" type="VBoxContainer" parent="vbox_info_container/hbox_info_container/vbox_info"]
+layout_mode = 2
+
+[node name="lblParameter3" type="Label" parent="vbox_info_container/hbox_info_container/vbox_info/vboxParameter3"]
+layout_mode = 2
+text = "Paramter 3"
+
+[node name="prgParameter3" type="ProgressBar" parent="vbox_info_container/hbox_info_container/vbox_info/vboxParameter3"]
+layout_mode = 2
+value = 80.0
+
+[node name="tmrSlideStart" type="Timer" parent="vbox_info_container/hbox_info_container"]
+wait_time = 0.4
+one_shot = true
+
+[node name="tmrSlideEnd" type="Timer" parent="vbox_info_container/hbox_info_container"]
+wait_time = 0.4
+one_shot = true
+
+[node name="grd_schedule" type="GridContainer" parent="."]
+visible = false
+offset_left = 216.0
+offset_top = 873.0
+offset_right = 995.0
+offset_bottom = 993.0
+columns = 2
+
+[node name="vbox_work" type="VBoxContainer" parent="grd_schedule"]
+layout_mode = 2
+
+[node name="hbox_work" type="HBoxContainer" parent="grd_schedule/vbox_work"]
+layout_mode = 2
+alignment = 1
+
+[node name="btnWork1" type="Button" parent="grd_schedule/vbox_work/hbox_work"]
+layout_mode = 2
+text = "Work_button_1"
+
+[node name="btnWork1" type="Timer" parent="grd_schedule/vbox_work/hbox_work/btnWork1"]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnWork2" type="Button" parent="grd_schedule/vbox_work/hbox_work"]
+layout_mode = 2
+text = "Work_button_2"
+
+[node name="btnWork2" type="Timer" parent="grd_schedule/vbox_work/hbox_work/btnWork2"]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnWork3" type="Button" parent="grd_schedule/vbox_work/hbox_work"]
+layout_mode = 2
+text = "Work_button_3"
+
+[node name="btnWork3" type="Timer" parent="grd_schedule/vbox_work/hbox_work/btnWork3"]
+wait_time = 0.5
+one_shot = true
+
+[node name="lblWork" type="Label" parent="grd_schedule/vbox_work"]
+layout_mode = 2
+text = "Work"
+
+[node name="vbox_study" type="VBoxContainer" parent="grd_schedule"]
+layout_mode = 2
+
+[node name="hbox_study" type="HBoxContainer" parent="grd_schedule/vbox_study"]
+layout_mode = 2
+alignment = 1
+
+[node name="btnStudy1" type="Button" parent="grd_schedule/vbox_study/hbox_study"]
+layout_mode = 2
+text = "Study_button_1"
+
+[node name="btnStudy1" type="Timer" parent="grd_schedule/vbox_study/hbox_study/btnStudy1"]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnStudy2" type="Button" parent="grd_schedule/vbox_study/hbox_study"]
+layout_mode = 2
+text = "Study_button_2"
+
+[node name="btnStudy2" type="Timer" parent="grd_schedule/vbox_study/hbox_study/btnStudy2"]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnStudy3" type="Button" parent="grd_schedule/vbox_study/hbox_study"]
+layout_mode = 2
+text = "Study_button_3"
+
+[node name="btnStudy3" type="Timer" parent="grd_schedule/vbox_study/hbox_study/btnStudy3"]
+wait_time = 0.5
+one_shot = true
+
+[node name="lblStudy" type="Label" parent="grd_schedule/vbox_study"]
+layout_mode = 2
+text = "Study"
+
+[node name="vbox_rest" type="VBoxContainer" parent="grd_schedule"]
+layout_mode = 2
+
+[node name="lblRest" type="Label" parent="grd_schedule/vbox_rest"]
+layout_mode = 2
+text = "Rest"
+
+[node name="hbox_rest" type="HBoxContainer" parent="grd_schedule/vbox_rest"]
+layout_mode = 2
+alignment = 1
+
+[node name="btnRest1" type="Button" parent="grd_schedule/vbox_rest/hbox_rest"]
+layout_mode = 2
+text = "Sleep"
+
+[node name="tmrRest1" type="Timer" parent="grd_schedule/vbox_rest/hbox_rest/btnRest1"]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnRest2" type="Button" parent="grd_schedule/vbox_rest/hbox_rest"]
+layout_mode = 2
+text = "Interact"
+
+[node name="tmrRest2" type="Timer" parent="grd_schedule/vbox_rest/hbox_rest/btnRest2"]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnRest3" type="Button" parent="grd_schedule/vbox_rest/hbox_rest"]
+layout_mode = 2
+text = "Talk"
+
+[node name="tmrRest3" type="Timer" parent="grd_schedule/vbox_rest/hbox_rest/btnRest3"]
+wait_time = 0.5
+one_shot = true
+
+[node name="vbox_explore" type="VBoxContainer" parent="grd_schedule"]
+layout_mode = 2
+
+[node name="lblRest" type="Label" parent="grd_schedule/vbox_explore"]
+layout_mode = 2
+text = "Rest"
+
+[node name="hbox_explore" type="HBoxContainer" parent="grd_schedule/vbox_explore"]
+layout_mode = 2
+alignment = 1
+
+[node name="btnExplore1" type="Button" parent="grd_schedule/vbox_explore/hbox_explore"]
+layout_mode = 2
+text = "Rest_button1"
+
+[node name="btnExplore1" type="Timer" parent="grd_schedule/vbox_explore/hbox_explore/btnExplore1"]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnExplore2" type="Button" parent="grd_schedule/vbox_explore/hbox_explore"]
+layout_mode = 2
+text = "Rest_button2"
+
+[node name="btnExplore2" type="Timer" parent="grd_schedule/vbox_explore/hbox_explore/btnExplore2"]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnExplore3" type="Button" parent="grd_schedule/vbox_explore/hbox_explore"]
+layout_mode = 2
+text = "Rest_button3"
+
+[node name="btnExplore3" type="Timer" parent="grd_schedule/vbox_explore/hbox_explore/btnExplore3"]
+wait_time = 0.5
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1014.00006, 465)
+scale = Vector2(0.3480978, 0.3480977)
+texture = ExtResource("2_nkn11")
+
+[node name="box_info" type="BoxContainer" parent="."]
+offset_left = 84.0
+offset_top = 77.0
+offset_right = 144.0
+offset_bottom = 127.0
+
+[node name="hbox_info_separator" type="HBoxContainer" parent="box_info"]
+layout_mode = 2
+
+[node name="lblDay" type="Label" parent="box_info/hbox_info_separator"]
+layout_mode = 2
+text = "15"
+
+[node name="vbox_info_Day" type="VBoxContainer" parent="box_info/hbox_info_separator"]
+layout_mode = 2
+
+[node name="lblYear" type="Label" parent="box_info/hbox_info_separator/vbox_info_Day"]
+layout_mode = 2
+text = "1997"
+
+[node name="lblMonth" type="Label" parent="box_info/hbox_info_separator/vbox_info_Day"]
+layout_mode = 2
+text = "Aug"
+
+[node name="ndeProgress" type="Node2D" parent="."]
+visible = false
+script = ExtResource("5_hg06g")
+
+[node name="txtBackground" type="TextureRect" parent="ndeProgress"]
+offset_left = -16.0
+offset_top = -13.0
+offset_right = 1941.0
+offset_bottom = 1096.0
+texture = ExtResource("3_hg06g")
+expand_mode = 1
+
+[node name="lblProgress" type="Label" parent="ndeProgress"]
+offset_left = 18.0
+offset_top = -67.0
+offset_right = 1928.0
+offset_bottom = 845.0
+text = "Event in Progress"
+label_settings = SubResource("LabelSettings_7gcej")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblCalender" type="Label" parent="ndeProgress"]
+offset_left = 736.0
+offset_top = 56.0
+offset_right = 1226.0
+offset_bottom = 124.0
+text = "[Day] [Month], [Year]"
+label_settings = SubResource("LabelSettings_x6xmd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblText2" type="Label" parent="ndeProgress"]
+offset_left = 730.0
+offset_top = 705.0
+offset_right = 1220.0
+offset_bottom = 773.0
+text = "Event % of %"
+label_settings = SubResource("LabelSettings_x6xmd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tmrTick" type="Timer" parent="ndeProgress"]
+wait_time = 1.0699999999999998
+
+[connection signal="pressed" from="grdSelection/tbnItem0" to="." method="_on_tbn_item_0_pressed"]
+[connection signal="pressed" from="grdSelection/tbnItem1" to="." method="_on_tbn_item_1_pressed"]
+[connection signal="pressed" from="grdSelection/tbnItem2" to="." method="_on_tbn_item_2_pressed"]
+[connection signal="pressed" from="grdSelection/tbnItem3" to="." method="_on_tbn_item_3_pressed"]
+[connection signal="pressed" from="btnEnd" to="." method="_on_btn_end_pressed"]
+[connection signal="ready" from="vbox_info_container" to="." method="_on_vbox_info_container_ready"]
+[connection signal="timeout" from="vbox_info_container/hbox_info_container/tmrSlideEnd" to="." method="_on_tmr_slide_end_timeout"]
+[connection signal="mouse_entered" from="grd_schedule/vbox_rest/hbox_rest/btnRest1" to="." method="_on_btn_rest_1_mouse_entered"]
+[connection signal="mouse_exited" from="grd_schedule/vbox_rest/hbox_rest/btnRest1" to="." method="_on_btn_rest_1_mouse_exited"]
+[connection signal="pressed" from="grd_schedule/vbox_rest/hbox_rest/btnRest1" to="." method="_on_btn_rest_1_pressed"]
+[connection signal="timeout" from="grd_schedule/vbox_rest/hbox_rest/btnRest1/tmrRest1" to="." method="_on_tmr_rest_1_timeout"]
+[connection signal="mouse_entered" from="grd_schedule/vbox_rest/hbox_rest/btnRest2" to="." method="_on_btn_rest_2_mouse_entered"]
+[connection signal="mouse_exited" from="grd_schedule/vbox_rest/hbox_rest/btnRest2" to="." method="_on_btn_rest_2_mouse_exited"]
+[connection signal="pressed" from="grd_schedule/vbox_rest/hbox_rest/btnRest2" to="." method="_on_btn_rest_2_pressed"]
+[connection signal="timeout" from="grd_schedule/vbox_rest/hbox_rest/btnRest2/tmrRest2" to="." method="_on_tmr_rest_2_timeout"]
+[connection signal="mouse_entered" from="grd_schedule/vbox_rest/hbox_rest/btnRest3" to="." method="_on_btn_rest_3_mouse_entered"]
+[connection signal="mouse_exited" from="grd_schedule/vbox_rest/hbox_rest/btnRest3" to="." method="_on_btn_rest_3_mouse_exited"]
+[connection signal="pressed" from="grd_schedule/vbox_rest/hbox_rest/btnRest3" to="." method="_on_btn_rest_3_pressed"]
+[connection signal="timeout" from="grd_schedule/vbox_rest/hbox_rest/btnRest3/tmrRest3" to="." method="_on_tmr_rest_3_timeout"]
+[connection signal="timeout" from="ndeProgress/tmrTick" to="ndeProgress" method="_on_tmr_tick_timeout"]

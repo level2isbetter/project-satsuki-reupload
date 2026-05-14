@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="bitmap.png"
+   inkscape:export-xdpi="375"
+   inkscape:export-ydpi="375"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="bar_general.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.2382812"
+     inkscape:cx="234.59937"
+     inkscape:cy="251.96215"
+     inkscape:window-width="1440"
+     inkscape:window-height="878"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient21"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ff2d00;stop-opacity:1;"
+         offset="0"
+         id="stop21" />
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1;"
+         offset="0.40000001"
+         id="stop23" />
+      <stop
+         style="stop-color:#ffccd8;stop-opacity:1;"
+         offset="1"
+         id="stop22" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient21"
+       id="linearGradient22"
+       x1="257.61514"
+       y1="320.23901"
+       x2="257.61514"
+       y2="111.00388"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient22);fill-rule:evenodd;stroke:none;stroke-width:8.81502;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3"
+       width="480.57895"
+       height="88.846283"
+       x="15.710526"
+       y="211.57686"
+       ry="44.423141"
+       inkscape:export-filename="gauge.png"
+       inkscape:export-xdpi="392.32196"
+       inkscape:export-ydpi="392.32196" />
+  </g>
+</svg>

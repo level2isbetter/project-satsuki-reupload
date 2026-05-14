@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://qh6nrxia7e7p"]
+
+[ext_resource type="Texture2D" uid="uid://cl4fnocxay1kc" path="res://Art/pixil-frame-0.png" id="1_74dbi"]
+
+[node name="WindowDefault" type="NinePatchRect"]
+texture_filter = 1
+offset_right = 125.0
+offset_bottom = 71.0
+texture = ExtResource("1_74dbi")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4

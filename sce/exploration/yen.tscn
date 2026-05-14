@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://rv4k653xov2c"]
+
+[ext_resource type="Script" uid="uid://cj4v1fep23dxd" path="res://scr/exploration/collectible_item.gd" id="1_aqdd3"]
+[ext_resource type="Texture2D" uid="uid://bx2wf0d7fowhl" path="res://img/items/yen.png" id="2_6vdx0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xewbh"]
+radius = 24.020824
+
+[node name="CollectibleYen" type="Area2D"]
+z_index = 1
+script = ExtResource("1_aqdd3")
+itemId = "yen"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xewbh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5.9604645e-08, 0)
+scale = Vector2(0.08984372, 0.09472653)
+texture = ExtResource("2_6vdx0")

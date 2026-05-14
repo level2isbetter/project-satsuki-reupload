@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://jfprbbd22ylb"]
+
+[ext_resource type="Script" path="res://sce/conversation/character_portrait.gd" id="1_ukdw5"]
+[ext_resource type="Texture2D" uid="uid://cgsw2bkl7pr2h" path="res://img/conversation/char/reimu/base.png" id="2_os62n"]
+[ext_resource type="Texture2D" uid="uid://de08goo7rfhb1" path="res://img/conversation/char/reimu/eyelashes/angry_left.png" id="3_ipv6y"]
+[ext_resource type="Texture2D" uid="uid://bkvbqcdu6qcb7" path="res://img/conversation/char/reimu/mouths/mood.png" id="4_ka3x3"]
+
+[node name="CharacterPortrait" type="Node2D"]
+z_index = -45
+script = ExtResource("1_ukdw5")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("2_os62n")
+
+[node name="Eyes" type="Sprite2D" parent="."]
+position = Vector2(-5.500017, 4.5000134)
+texture = ExtResource("3_ipv6y")
+
+[node name="Mouth" type="Sprite2D" parent="."]
+texture = ExtResource("4_ka3x3")

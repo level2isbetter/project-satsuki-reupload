@@ -1,0 +1,544 @@
+[gd_scene format=3 uid="uid://dsy7eej11bcl0"]
+
+[ext_resource type="Script" uid="uid://c28esei3rvjnr" path="res://scr/schedule/schedule.gd" id="1_3a2vp"]
+[ext_resource type="Texture2D" uid="uid://d0uuhc8nq17o6" path="res://img/schedule/timering.png" id="2_00b65"]
+[ext_resource type="Texture2D" uid="uid://b6s0t73txd01w" path="res://img/conversation/background/shrine.png" id="2_5m36w"]
+[ext_resource type="Script" uid="uid://dixj8iqtj4fs5" path="res://sce/schedule/txt_clock.gd" id="3_664kr"]
+[ext_resource type="Texture2D" uid="uid://benlupkccwe5q" path="res://img/schedule/schedule_selection.png" id="3_dd0b2"]
+[ext_resource type="Texture2D" uid="uid://bwb3n6m401swq" path="res://img/blank_half.png" id="3_hg06g"]
+[ext_resource type="Texture2D" uid="uid://db2xsok6ush60" path="res://img/conversation/char/reimu/mouths/happy.png" id="3_xhgut"]
+[ext_resource type="Texture2D" uid="uid://cmjdb6yjqaiqr" path="res://img/conversation/char/reimu/expressions/mood.png" id="4_vme0d"]
+[ext_resource type="Texture2D" uid="uid://daud3u2cupbsu" path="res://img/icon.png" id="4_x6xmd"]
+[ext_resource type="Script" uid="uid://brm05nc1lcpbt" path="res://sce/schedule/nde_progress.gd" id="5_hg06g"]
+[ext_resource type="Texture2D" uid="uid://cgsw2bkl7pr2h" path="res://img/conversation/char/reimu/base.png" id="7_664kr"]
+[ext_resource type="AudioStream" uid="uid://dw8d0w31gnva8" path="res://aud/sfx/schedule/tick.ogg" id="10_5m36w"]
+[ext_resource type="AudioStream" uid="uid://cqnny8sk05db3" path="res://aud/mus/Startup.ogg" id="12_tb1xv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hg06g"]
+line_spacing = 2.0
+font_size = 50
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_00b65"]
+font_size = 50
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_664kr"]
+font_size = 50
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7gcej"]
+font_size = 62
+
+[sub_resource type="LabelSettings" id="LabelSettings_x6xmd"]
+font_size = 49
+
+[node name="Node2D" type="Node2D" unique_id=232224810]
+script = ExtResource("1_3a2vp")
+
+[node name="txtBackground" type="TextureRect" parent="." unique_id=617874839]
+offset_right = 1934.0
+offset_bottom = 1105.0
+texture = ExtResource("2_5m36w")
+expand_mode = 1
+
+[node name="cntChar" type="Control" parent="." unique_id=1514932893]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 971.0
+offset_top = 158.0
+offset_right = 1011.0
+offset_bottom = 198.0
+
+[node name="txtBase" type="TextureRect" parent="cntChar" unique_id=1173626591]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -193.5
+offset_top = -108.0
+offset_right = 175.5
+offset_bottom = 553.0
+grow_horizontal = 2
+texture = ExtResource("7_664kr")
+expand_mode = 5
+
+[node name="txtMouth" type="TextureRect" parent="cntChar" unique_id=1060648458]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -146.5
+offset_right = 146.5
+offset_bottom = 520.8889
+grow_horizontal = 2
+texture = ExtResource("3_xhgut")
+expand_mode = 5
+
+[node name="txtEyes" type="TextureRect" parent="cntChar" unique_id=275673516]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -146.5
+offset_right = 146.5
+offset_bottom = 520.8889
+grow_horizontal = 2
+texture = ExtResource("4_vme0d")
+expand_mode = 5
+
+[node name="txt_info" type="TextureRect" parent="." unique_id=1259181928]
+offset_left = 421.0
+offset_top = 738.0
+offset_right = 881.0
+offset_bottom = 1067.0
+texture = ExtResource("3_dd0b2")
+expand_mode = 1
+
+[node name="vbox_info_container" type="VBoxContainer" parent="txt_info" unique_id=445496904]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 45.0
+offset_right = 436.0
+offset_bottom = 283.0
+alignment = 1
+
+[node name="hbox_info_container" type="HBoxContainer" parent="txt_info/vbox_info_container" unique_id=536854086]
+layout_mode = 2
+
+[node name="vbox_img" type="VBoxContainer" parent="txt_info/vbox_info_container/hbox_info_container" unique_id=633953217]
+layout_mode = 2
+
+[node name="img_info" type="TextureRect" parent="txt_info/vbox_info_container/hbox_info_container/vbox_img" unique_id=1579934027]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_x6xmd")
+expand_mode = 1
+
+[node name="vbox_info" type="VBoxContainer" parent="txt_info/vbox_info_container/hbox_info_container" unique_id=505528721]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="lblInfo" type="Label" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info" unique_id=1928678135]
+layout_mode = 2
+text = "Info Test"
+horizontal_alignment = 1
+
+[node name="lblInfoText" type="Label" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info" unique_id=1904102530]
+layout_mode = 2
+text = "Sample Sample Sample Text"
+
+[node name="vboxParameter1" type="VBoxContainer" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info" unique_id=2004285017]
+layout_mode = 2
+
+[node name="lblParameter1" type="Label" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info/vboxParameter1" unique_id=875906705]
+layout_mode = 2
+text = "Paramter 1"
+
+[node name="prgParameter1" type="ProgressBar" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info/vboxParameter1" unique_id=1358159498]
+layout_mode = 2
+value = 80.0
+
+[node name="vboxParameter2" type="VBoxContainer" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info" unique_id=679272494]
+layout_mode = 2
+
+[node name="lblParameter2" type="Label" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info/vboxParameter2" unique_id=1680912385]
+layout_mode = 2
+text = "Paramter 2"
+
+[node name="prgParameter2" type="ProgressBar" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info/vboxParameter2" unique_id=1268869919]
+layout_mode = 2
+value = 80.0
+
+[node name="vboxParameter3" type="VBoxContainer" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info" unique_id=1898559266]
+layout_mode = 2
+
+[node name="lblParameter3" type="Label" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info/vboxParameter3" unique_id=1180087468]
+layout_mode = 2
+text = "Paramter 3"
+
+[node name="prgParameter3" type="ProgressBar" parent="txt_info/vbox_info_container/hbox_info_container/vbox_info/vboxParameter3" unique_id=1677964389]
+layout_mode = 2
+value = 80.0
+
+[node name="tmrSlideStart" type="Timer" parent="txt_info/vbox_info_container/hbox_info_container" unique_id=1004344921]
+wait_time = 0.43
+one_shot = true
+
+[node name="tmrSlideEnd" type="Timer" parent="txt_info/vbox_info_container/hbox_info_container" unique_id=469124610]
+wait_time = 0.4
+one_shot = true
+
+[node name="btnEnd" type="Button" parent="." unique_id=1237841596]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 1689.0
+offset_top = 926.0
+offset_right = 1789.0
+offset_bottom = 957.0
+text = "End"
+
+[node name="txtSchedule" type="TextureRect" parent="." unique_id=1368402175]
+offset_left = -1201.0
+offset_top = 854.0
+offset_right = -16.0
+offset_bottom = 1160.0
+texture = ExtResource("3_dd0b2")
+expand_mode = 1
+
+[node name="grd_schedule" type="GridContainer" parent="txtSchedule" unique_id=4855036]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 97.0
+offset_right = 858.0
+offset_bottom = 217.0
+columns = 2
+
+[node name="vbox_work" type="VBoxContainer" parent="txtSchedule/grd_schedule" unique_id=1825849858]
+layout_mode = 2
+
+[node name="hbox_work" type="HBoxContainer" parent="txtSchedule/grd_schedule/vbox_work" unique_id=71069688]
+layout_mode = 2
+alignment = 1
+
+[node name="btnWork1" type="Button" parent="txtSchedule/grd_schedule/vbox_work/hbox_work" unique_id=1260503342]
+layout_mode = 2
+text = "[N/A]"
+
+[node name="tmrWork1" type="Timer" parent="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork1" unique_id=1279495517]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnWork2" type="Button" parent="txtSchedule/grd_schedule/vbox_work/hbox_work" unique_id=101341649]
+layout_mode = 2
+text = "[N/A]"
+
+[node name="tmrWork2" type="Timer" parent="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork2" unique_id=1889559102]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnWork3" type="Button" parent="txtSchedule/grd_schedule/vbox_work/hbox_work" unique_id=547253998]
+layout_mode = 2
+text = "[N/A]"
+
+[node name="tmrWork3" type="Timer" parent="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork3" unique_id=618571618]
+wait_time = 0.5
+one_shot = true
+
+[node name="lblWork" type="Label" parent="txtSchedule/grd_schedule/vbox_work" unique_id=1130447146]
+layout_mode = 2
+text = "Work -NOT AVAILABLE-"
+
+[node name="vbox_study" type="VBoxContainer" parent="txtSchedule/grd_schedule" unique_id=734619063]
+layout_mode = 2
+
+[node name="hbox_study" type="HBoxContainer" parent="txtSchedule/grd_schedule/vbox_study" unique_id=1676473260]
+layout_mode = 2
+alignment = 1
+
+[node name="btnStudy1" type="Button" parent="txtSchedule/grd_schedule/vbox_study/hbox_study" unique_id=1147152813]
+layout_mode = 2
+text = "[N/A]"
+
+[node name="tmrStudy1" type="Timer" parent="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy1" unique_id=2004456786]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnStudy2" type="Button" parent="txtSchedule/grd_schedule/vbox_study/hbox_study" unique_id=1416699189]
+layout_mode = 2
+text = "[N/A]"
+
+[node name="tmrStudy2" type="Timer" parent="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy2" unique_id=35232789]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnStudy3" type="Button" parent="txtSchedule/grd_schedule/vbox_study/hbox_study" unique_id=1976312435]
+layout_mode = 2
+text = "[N/A]"
+
+[node name="tmrStudy3" type="Timer" parent="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy3" unique_id=1915692574]
+wait_time = 0.5
+one_shot = true
+
+[node name="lblStudy" type="Label" parent="txtSchedule/grd_schedule/vbox_study" unique_id=912437695]
+layout_mode = 2
+text = "Study - NOT AVAILABLE-"
+
+[node name="vbox_rest" type="VBoxContainer" parent="txtSchedule/grd_schedule" unique_id=737322394]
+layout_mode = 2
+
+[node name="lblRest" type="Label" parent="txtSchedule/grd_schedule/vbox_rest" unique_id=278396855]
+layout_mode = 2
+text = "Rest"
+
+[node name="hbox_rest" type="HBoxContainer" parent="txtSchedule/grd_schedule/vbox_rest" unique_id=1953993727]
+layout_mode = 2
+alignment = 1
+
+[node name="btnRest1" type="Button" parent="txtSchedule/grd_schedule/vbox_rest/hbox_rest" unique_id=1495992705]
+layout_mode = 2
+text = "Sleep"
+
+[node name="tmrRest1" type="Timer" parent="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest1" unique_id=102036653]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnRest2" type="Button" parent="txtSchedule/grd_schedule/vbox_rest/hbox_rest" unique_id=1211129161]
+layout_mode = 2
+text = "Interact"
+
+[node name="tmrRest2" type="Timer" parent="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest2" unique_id=851578786]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnRest3" type="Button" parent="txtSchedule/grd_schedule/vbox_rest/hbox_rest" unique_id=1483278694]
+layout_mode = 2
+text = "Talk"
+
+[node name="tmrRest3" type="Timer" parent="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest3" unique_id=1999734193]
+wait_time = 0.5
+one_shot = true
+
+[node name="vbox_explore" type="VBoxContainer" parent="txtSchedule/grd_schedule" unique_id=683795370]
+layout_mode = 2
+
+[node name="lblExplore" type="Label" parent="txtSchedule/grd_schedule/vbox_explore" unique_id=1671777127]
+layout_mode = 2
+text = "Explore"
+
+[node name="hbox_explore" type="HBoxContainer" parent="txtSchedule/grd_schedule/vbox_explore" unique_id=220132943]
+layout_mode = 2
+alignment = 1
+
+[node name="btnExplore1" type="Button" parent="txtSchedule/grd_schedule/vbox_explore/hbox_explore" unique_id=1791451870]
+layout_mode = 2
+text = "Overworld"
+
+[node name="tmrExplore1" type="Timer" parent="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore1" unique_id=913630823]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnExplore2" type="Button" parent="txtSchedule/grd_schedule/vbox_explore/hbox_explore" unique_id=30465558]
+layout_mode = 2
+text = "[N/A]"
+
+[node name="tmrExplore2" type="Timer" parent="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore2" unique_id=863442446]
+wait_time = 0.5
+one_shot = true
+
+[node name="btnExplore3" type="Button" parent="txtSchedule/grd_schedule/vbox_explore/hbox_explore" unique_id=1762262658]
+layout_mode = 2
+text = "[N/A]"
+
+[node name="tmrExplore3" type="Timer" parent="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore3" unique_id=546014473]
+wait_time = 0.5
+one_shot = true
+
+[node name="txtClock" type="TextureRect" parent="." unique_id=1150345018]
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = 690.0
+offset_right = 438.0
+offset_bottom = 1281.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_00b65")
+expand_mode = 1
+script = ExtResource("3_664kr")
+
+[node name="sfxTick" type="AudioStreamPlayer2D" parent="txtClock" unique_id=1002439486]
+position = Vector2(187, -690)
+stream = ExtResource("10_5m36w")
+max_distance = 4096.0
+playback_type = 1
+parameters/looping = true
+
+[node name="grdSelection" type="GridContainer" parent="txtClock" unique_id=303203043]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 108.0
+offset_right = 512.0
+offset_bottom = 506.0
+rotation = 0.7853982
+pivot_offset = Vector2(200, 200)
+theme_override_constants/h_separation = 270
+theme_override_constants/v_separation = 270
+columns = 2
+
+[node name="tbnItem0" type="TextureButton" parent="txtClock/grdSelection" unique_id=1430370290]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_hg06g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="tbnItem1" type="TextureButton" parent="txtClock/grdSelection" unique_id=380774360]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_hg06g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="tbnItem2" type="TextureButton" parent="txtClock/grdSelection" unique_id=1728049162]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_hg06g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="tbnItem3" type="TextureButton" parent="txtClock/grdSelection" unique_id=1969558013]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_hg06g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="box_info" type="BoxContainer" parent="." unique_id=298502494]
+offset_left = 63.0
+offset_top = 35.0
+offset_right = 469.0
+offset_bottom = 187.0
+
+[node name="hbox_info_separator" type="HBoxContainer" parent="box_info" unique_id=838222392]
+layout_mode = 2
+
+[node name="lblDay" type="Label" parent="box_info/hbox_info_separator" unique_id=1991879106]
+layout_mode = 2
+text = "15"
+label_settings = SubResource("LabelSettings_hg06g")
+
+[node name="vbox_info_Day" type="VBoxContainer" parent="box_info/hbox_info_separator" unique_id=1598160939]
+layout_mode = 2
+
+[node name="lblYear" type="Label" parent="box_info/hbox_info_separator/vbox_info_Day" unique_id=1879554576]
+layout_mode = 2
+text = "1997"
+label_settings = SubResource("LabelSettings_00b65")
+
+[node name="lblMonth" type="Label" parent="box_info/hbox_info_separator/vbox_info_Day" unique_id=1107149290]
+layout_mode = 2
+text = "Aug"
+label_settings = SubResource("LabelSettings_664kr")
+
+[node name="ndeProgress" type="Node2D" parent="." unique_id=1981672813]
+visible = false
+script = ExtResource("5_hg06g")
+
+[node name="music" type="AudioStreamPlayer2D" parent="ndeProgress" unique_id=1219954303]
+stream = ExtResource("12_tb1xv")
+max_distance = 4096.0
+playback_type = 1
+parameters/looping = true
+
+[node name="txtBackground" type="TextureRect" parent="ndeProgress" unique_id=1508220802]
+offset_left = -16.0
+offset_top = -13.0
+offset_right = 1941.0
+offset_bottom = 1096.0
+texture = ExtResource("3_hg06g")
+expand_mode = 1
+
+[node name="lblProgress" type="Label" parent="ndeProgress" unique_id=1553718601]
+offset_left = 19.0
+offset_top = 72.0
+offset_right = 1929.0
+offset_bottom = 984.0
+text = "Event in Progress"
+label_settings = SubResource("LabelSettings_7gcej")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblCalender" type="Label" parent="ndeProgress" unique_id=1662234160]
+offset_left = 736.0
+offset_top = 56.0
+offset_right = 1226.0
+offset_bottom = 124.0
+text = "[Day] [Month], [Year]"
+label_settings = SubResource("LabelSettings_x6xmd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tmrTick" type="Timer" parent="ndeProgress" unique_id=627826737]
+wait_time = 0.73
+
+[node name="tmrHoldEnd" type="Timer" parent="ndeProgress" unique_id=1829712857]
+one_shot = true
+
+[node name="tmrHoldTransition" type="Timer" parent="ndeProgress" unique_id=1962322205]
+
+[node name="tmrHoldStart" type="Timer" parent="ndeProgress" unique_id=1611897776]
+one_shot = true
+
+[node name="tmrChanceScheduleSlide" type="Timer" parent="." unique_id=424482449]
+wait_time = 1.0499999999999998
+one_shot = true
+
+[connection signal="ready" from="txt_info/vbox_info_container" to="." method="_on_vbox_info_container_ready"]
+[connection signal="timeout" from="txt_info/vbox_info_container/hbox_info_container/tmrSlideStart" to="." method="_on_tmr_slide_start_timeout"]
+[connection signal="timeout" from="txt_info/vbox_info_container/hbox_info_container/tmrSlideEnd" to="." method="_on_tmr_slide_end_timeout"]
+[connection signal="pressed" from="btnEnd" to="." method="_on_btn_end_pressed"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork1" to="." method="_on_btn_work_1_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork1" to="." method="_on_btn_work_1_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork1" to="." method="_on_btn_work_1_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork1/tmrWork1" to="." method="_on_btn_work_1_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork2" to="." method="_on_btn_work_2_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork2" to="." method="_on_btn_work_2_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork2" to="." method="_on_btn_work_2_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork2/tmrWork2" to="." method="_on_btn_work_2_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork3" to="." method="_on_btn_work_3_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork3" to="." method="_on_btn_work_3_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork3" to="." method="_on_btn_work_3_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_work/hbox_work/btnWork3/tmrWork3" to="." method="_on_btn_work_3_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy1" to="." method="_on_btn_study_1_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy1" to="." method="_on_btn_study_1_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy1" to="." method="_on_btn_study_1_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy1/tmrStudy1" to="." method="_on_btn_study_1_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy2" to="." method="_on_btn_study_2_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy2" to="." method="_on_btn_study_2_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy2" to="." method="_on_btn_study_2_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy2/tmrStudy2" to="." method="_on_btn_study_2_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy3" to="." method="_on_btn_study_3_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy3" to="." method="_on_btn_study_3_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy3" to="." method="_on_btn_study_3_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_study/hbox_study/btnStudy3/tmrStudy3" to="." method="_on_btn_study_3_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest1" to="." method="_on_btn_rest_1_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest1" to="." method="_on_btn_rest_1_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest1" to="." method="_on_btn_rest_1_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest1/tmrRest1" to="." method="_on_tmr_rest_1_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest2" to="." method="_on_btn_rest_2_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest2" to="." method="_on_btn_rest_2_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest2" to="." method="_on_btn_rest_2_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest2/tmrRest2" to="." method="_on_tmr_rest_2_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest3" to="." method="_on_btn_rest_3_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest3" to="." method="_on_btn_rest_3_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest3" to="." method="_on_btn_rest_3_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_rest/hbox_rest/btnRest3/tmrRest3" to="." method="_on_tmr_rest_3_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore1" to="." method="_on_btn_explore_1_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore1" to="." method="_on_btn_explore_1_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore1" to="." method="_on_btn_explore_1_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore1/tmrExplore1" to="." method="_on_tmr_explore_1_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore2" to="." method="_on_btn_explore_2_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore2" to="." method="_on_btn_explore_2_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore2" to="." method="_on_btn_explore_2_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore2/tmrExplore2" to="." method="_on_tmr_explore_2_timeout"]
+[connection signal="mouse_entered" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore3" to="." method="_on_btn_explore_3_mouse_entered"]
+[connection signal="mouse_exited" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore3" to="." method="_on_btn_explore_3_mouse_exited"]
+[connection signal="pressed" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore3" to="." method="_on_btn_explore_3_pressed"]
+[connection signal="timeout" from="txtSchedule/grd_schedule/vbox_explore/hbox_explore/btnExplore3/tmrExplore3" to="." method="_on_tmr_explore_3_timeout"]
+[connection signal="pressed" from="txtClock/grdSelection/tbnItem0" to="." method="_on_tbn_item_0_pressed"]
+[connection signal="pressed" from="txtClock/grdSelection/tbnItem1" to="." method="_on_tbn_item_1_pressed"]
+[connection signal="pressed" from="txtClock/grdSelection/tbnItem2" to="." method="_on_tbn_item_2_pressed"]
+[connection signal="pressed" from="txtClock/grdSelection/tbnItem3" to="." method="_on_tbn_item_3_pressed"]
+[connection signal="timeout" from="ndeProgress/tmrTick" to="ndeProgress" method="_on_tmr_tick_timeout"]
+[connection signal="timeout" from="ndeProgress/tmrHoldEnd" to="ndeProgress" method="_on_tmr_hold_end_timeout"]
+[connection signal="timeout" from="ndeProgress/tmrHoldTransition" to="ndeProgress" method="_on_tmr_hold_transition_timeout"]
+[connection signal="timeout" from="ndeProgress/tmrHoldStart" to="ndeProgress" method="_on_tmr_hold_start_timeout"]
+[connection signal="timeout" from="tmrChanceScheduleSlide" to="." method="_on_tmr_chance_schedule_slide_timeout"]

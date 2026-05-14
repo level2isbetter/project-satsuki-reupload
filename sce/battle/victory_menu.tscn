@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cdabkm0bjkqks"]
+
+[ext_resource type="Texture2D" uid="uid://cl4fnocxay1kc" path="res://img/battle/ui/placeholder/pixil-frame-0.png" id="1_kvhvm"]
+
+[node name="VictoryMenu" type="NinePatchRect"]
+offset_right = 512.0
+offset_bottom = 512.0
+texture = ExtResource("1_kvhvm")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="VictLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 26.0
+offset_right = 116.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 24
+text = "Victory!"
+
+[node name="GainLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 97.0
+offset_right = 73.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 20
+text = "EXP:"
+
+[node name="DropLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 320.0
+offset_right = 101.0
+offset_bottom = 348.0
+theme_override_font_sizes/font_size = 20
+text = "Drops:"

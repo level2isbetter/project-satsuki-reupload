@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm57bw1buy0n3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ihivm"]
+load_path = "res://.godot/imported/placeholder entity.png-233dfc1aa4e39bac92ab1bc261860c5d.ctex"
+
+[node name="BattlePlayer" type="TextureButton"]
+texture_filter = 1
+offset_left = 218.0
+offset_top = 356.0
+offset_right = 226.0
+offset_bottom = 364.0
+scale = Vector2(14.39, 14.39)
+texture_normal = SubResource("CompressedTexture2D_ihivm")

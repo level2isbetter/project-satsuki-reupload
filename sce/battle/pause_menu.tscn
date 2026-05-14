@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://bfi7qbi2fkjik"]
+
+[ext_resource type="Texture2D" uid="uid://cyf8cxdujq7vn" path="res://img/battle/ui/menu.png" id="1_m6qj4"]
+[ext_resource type="Script" path="res://scr/battle/pause_menu.gd" id="2_ndkyx"]
+
+[node name="PauseMenu" type="NinePatchRect"]
+process_mode = 3
+texture_filter = 1
+script = ExtResource("2_ndkyx")
+
+[node name="MenuDisplay" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_m6qj4")
+expand_mode = 1
+
+[node name="SettingsMenu" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 83.0
+offset_top = 168.0
+offset_right = 603.0
+offset_bottom = 575.0
+theme_override_constants/separation = 28
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsMenu"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Label" type="Label" parent="SettingsMenu/HBoxContainer"]
+layout_mode = 2
+text = "Sound"
+
+[node name="VolumeSlider" type="HSlider" parent="SettingsMenu/HBoxContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+
+[node name="BackButton" type="Button" parent="SettingsMenu"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Back"
+focus_mode = 2

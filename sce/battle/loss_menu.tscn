@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cr1k8lngknafm"]
+
+[ext_resource type="Texture2D" uid="uid://cl4fnocxay1kc" path="res://img/battle/ui/placeholder/pixil-frame-0.png" id="1_y8scm"]
+[ext_resource type="Texture2D" uid="uid://byxurn856yy5h" path="res://img/battle/ui/placeholder/green bar.png" id="2_sxpif"]
+[ext_resource type="Texture2D" uid="uid://behttlc0jgsma" path="res://img/battle/ui/placeholder/red bar.png" id="3_t8xic"]
+
+[node name="LossMenu" type="NinePatchRect"]
+texture_filter = 1
+offset_right = 512.0
+offset_bottom = 256.0
+texture = ExtResource("1_y8scm")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 16.0
+offset_right = 371.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 55
+text = "You lost!
+Retry?"
+horizontal_alignment = 1
+
+[node name="YesButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 186.0
+offset_right = 216.0
+offset_bottom = 202.0
+texture_normal = ExtResource("2_sxpif")
+
+[node name="NoButton" type="TextureButton" parent="."]
+offset_left = 309.0
+offset_top = 189.0
+offset_right = 373.0
+offset_bottom = 205.0
+texture_normal = ExtResource("3_t8xic")
